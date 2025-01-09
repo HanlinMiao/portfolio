@@ -15,7 +15,7 @@ const Header = () => {
             </Image>
         </h3>
         <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-            Full stack developer in NY
+            Software developer in NY
         </h1>
         <p className="max-w-2xl mx-auto font-Ovo">
             I am a full stack developer based in NY Metro.
