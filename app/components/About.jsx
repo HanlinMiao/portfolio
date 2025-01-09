@@ -14,7 +14,9 @@ const About = () => {
             </div>
             <div className="flex-1">
                 <p className="mb-10 max-w-2xl font-Ovo">
-                    I am a full stack developer based in NY Metro. I have a passion for web development and love to create websites and web applications that are both beautiful and functional. I have experience working with a variety of technologies including HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more.
+                    I am a full stack developer based in NY Metro. <br/>
+                    I have a passion for web development and love to create websites and web applications that are both beautiful and functional.<br/>
+                    I have experience working with a variety of technologies including HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, and more.<br/>
                 </p>
                 <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
                     {infoList.map(({icon, iconDark, title, description}, index)=>(
