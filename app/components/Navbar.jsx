@@ -2,6 +2,7 @@
 import { assets } from "@/assets/assets";
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react'
+import { motion } from 'motion/react';
 
 const Navbar = ({isDarkMode, setIsDarkMode}) => {
     const [isScroll, setIsScroll] = useState(false);
@@ -35,7 +36,7 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
             <a href="#top">
                 <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="" className="w-28 cursor-pointer mr-14"/>
             </a>
-            <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3
+            <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 hover:scale-105 transition duration-300
                 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-w/50 dark:bg-transparent"}`}>
                 <li><a className="font-Ovo" href="#top">Home</a></li>
                 <li><a className="font-Ovo" href="#about">About me</a></li>
@@ -44,7 +45,9 @@ const Navbar = ({isDarkMode, setIsDarkMode}) => {
                 <li><a className="font-Ovo" href="#contact">Contact me</a></li>
             </ul>
             <div className="flex items-center gap-4">
-                <button onClick={() => setIsDarkMode(prev => !prev)}>
+                <button
+                className="hover:scale-150 transition duration-300"
+                onClick={() => setIsDarkMode(prev => !prev)}>
                     <Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt="" className="w-6"></Image>
                 </button>
                 <a href="#contact" className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo
